@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Microsoft clone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Add Font Awesome in <head> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Mega menu styling */
+    .mega-menu {
+      width: 95vw;
+      margin: 0 40px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: white;
+      display: none;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .dropdown.show .mega-menu {
+      display: block;
+    }
+
+    /* Consistent card styling */
+    .card-fixed {
+      height: 360px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-fixed .card-img-top {
+      height: 175px;
+      object-fit: cover;
+    }
+
+    .card-fixed .card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+
+    .card-fixed .btn {
+      margin-top: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="bg-primary text-white py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-2">
+        <img src="microsoft-logo.png" alt="Logo" width="120">
+        <a href="https://www.microsoft.com/en-in/microsoft-365" class="text-white text-decoration-none">Microsoft 365</a>
+        <a href="https://www.microsoft.com/en-in/microsoft-teams/group-chat-software" class="text-white text-decoration-none">Teams</a>
+        <a href="https://copilot.microsoft.com/" class="text-white text-decoration-none">Copilot</a>
+        <a href="https://www.microsoft.com/en-in/windows/?r=1" class="text-white text-decoration-none">Windows</a>
+        <a href="https://www.microsoft.com/en-in/surface" class="text-white text-decoration-none">Surface</a>
+        <a href="https://www.xbox.com/en-IN/" class="text-white text-decoration-none">Xbox</a>
+        <a href="https://support.microsoft.com/en-us" class="text-white text-decoration-none">Support</a>
+      </div>
+
+      <div class="d-flex gap-3">
+        <div class="dropdown">
+          <a class="text-white text-decoration-none dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            All Microsoft
+          </a>
+          <div class="dropdown-menu mega-menu px-4 py-4">
+            <div class="container-fluid px-4 py-4">
+              <div class="row">
+                <div class="col-md-2">
+                  <h6 class="text-primary">Software</h6>
+                  <a class="dropdown-item" href="#">Windows Apps</a>
+                  <a class="dropdown-item" href="#">AI</a>
+                  <a class="dropdown-item" href="#">OneDrive</a>
+                  <a class="dropdown-item" href="#">Outlook</a>
+                  <a class="dropdown-item" href="#">Skype</a>
+                  <a class="dropdown-item" href="#">OneNote</a>
+                  <a class="dropdown-item" href="#">Microsoft Teams</a>
+                </div>
+                <div class="col-md-2">
+                  <h6 class="text-primary">PCs & Devices</h6>
+                  <a class="dropdown-item" href="#">Shop Xbox</a>
+                  <a class="dropdown-item" href="#">Accessories</a>
+                </div>
+                <div class="col-md-2">
+                  <h6 class="text-primary">Entertainment</h6>
+                  <a class="dropdown-item" href="#">Xbox Game Pass Ultimate</a>
+                  <a class="dropdown-item" href="#">Xbox games</a>
+                  <a class="dropdown-item" href="#">PC games</a>
+                  <a class="dropdown-item" href="#">Windows digital games</a>
+                </div>
+                <div class="col-md-2">
+                  <h6 class="text-primary">Business</h6>
+                  <a class="dropdown-item" href="#">Microsoft Cloud</a>
+                  <a class="dropdown-item" href="#">Microsoft Security</a>
+                  <a class="dropdown-item" href="#">Azure</a>
+                  <a class="dropdown-item" href="#">Dynamics 365</a>
+                  <a class="dropdown-item" href="#">Microsoft 365 for business</a>
+                  <a class="dropdown-item" href="#">Microsoft Industry</a>
+                  <a class="dropdown-item" href="#">Microsoft Power Platform</a>
+                  <a class="dropdown-item" href="#">Windows 365</a>
+                </div>
+                <div class="col-md-2">
+                  <h6 class="text-primary">Developer & IT</h6>
+                  <a class="dropdown-item" href="#">Microsoft Developer</a>
+                  <a class="dropdown-item" href="#">Microsoft Learn</a>
+                  <a class="dropdown-item" href="#">Explore ISV Success</a>
+                  <a class="dropdown-item" href="#">Microsoft Tech Community</a>
+                  <a class="dropdown-item" href="#">Azure Marketplace</a>
+                  <a class="dropdown-item" href="#">AppSource</a>
+                  <a class="dropdown-item" href="#">Visual Studio</a>
+                </div>
+                <div class="col-md-2">
+                  <h6 class="text-primary">Other</h6>
+                  <a class="dropdown-item" href="#">Free downloads & security</a>
+                  <a class="dropdown-item" href="#">Education</a>
+                  <a class="dropdown-item" href="#">Gift Cards</a>
+                  <a class="dropdown-item" href="#">Licensing</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" class="text-white text-decoration-none"><i class="bi bi-search"></i> Search</a>
+        <a href="#" class="text-white text-decoration-none"><i class="bi bi-cart3"></i> Cart</a>
+        <a href="signin.html" class="text-white text-decoration-none"><i class="bi bi-person"></i> Sign In</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Card Grid Section -->
+  <div class="container mt-5">
+    <div class="row g-4">
+
+      <!-- Card 1 -->
+      <div class="col-md-3">
+        <div class="card shadow card-fixed">
+          <img src="left_laptop.avif" class="card-img-top" alt="Image 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">Surface Laptop, Copilot + PC</h5>
+            <p class="card-text">Unlock AI features like live Captions and Cocreator with this exceptionally powerful
+              laptop.</p>
+            <a href="https://www.microsoft.com/en-in/surface/devices/surface-laptop-7th-edition?icid=mscom_marcom_CPH1a_SurfaceLaptop7Edition_FY24SpringSurface" target="_blank" class="btn btn-primary">Learn more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-3">
+        <div class="card shadow card-fixed">
+          <img src="right_laptop.avif" class="card-img-top" alt="Image 2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Surface Copilot, Laptop +PC</h5>
+            <p class="card-text">This laptop's unrivalled flexibility and AI features like Cocreator, enable you to do
+              more than you ever imagined.</p>
+            <a href="https://www.microsoft.com/en-in/surface/devices/surface-pro-11th-edition?icid=mscom_marcom_CPH2a_SurfacePro11Edition_FY24SpringSurface" target="_blank" class="btn btn-primary">Learn more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-3">
+        <div class="card shadow card-fixed">
+          <img src="office.avif" class="card-img-top" alt="Image 3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Achieve extraordinary</h5>
+            <p class="card-text">Microsoft 365 delivers cloud storage, security and Microsoft Copilot in your favourite
+              apps – all in one plan.</p>
+            <a href="https://www.microsoft.com/en-in/microsoft-365/buy/compare-all-microsoft-365-products?icid=mscom_marcom_CPH3a_Microsoft365AI" target="_blank" class="btn btn-primary">Shop Microsoft 365</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-3">
+        <div class="card shadow card-fixed">
+          <img src="box.avif" class="card-img-top" alt="Image 4">
+          <div class="card-body text-center">
+            <h5 class="card-title">Xbox Series X</h5>
+            <p class="card-text">The fastest, most powerful Xbox ever.</p>
+            <a href="https://www.xbox.com/en-in/consoles/xbox-series-x?icid=mscom_marcom_CPH4a_XboxSeriesX" target="_blank" class="btn btn-primary">Shop Xbox Series X</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Game Pass Banner Section -->
+  <div class="container-fluid px-0 position-relative mt-5" style="max-width: 1300px;">
+    <img src="Game_pass.avif" alt="Game Pass Banner" class="img-fluid w-100">
+    <div class="position-absolute top-50 start-0 translate-middle-y text-white ps-5" style="max-width: 500px;">
+      <h4 class="fw-bold display-5">Game Pass</h4>
+      <p class="lead">Play new games on day one. Plus, enjoy hundreds of high-quality games with friends on console and
+        PC.</p>
+      <a href="https://www.xbox.com/en-in/games/store/xbox-game-pass-ultimate/cfq7ttc0khs0" target="_blank" class="btn btn-primary btn-sm px-4 py-2">Join
+        Now</a>
+    </div>
+  </div>
+
+  <!-- For Business Section -->
+  <div class="container mt-5 pt-4">
+    <h1>For business</h1>
+    <div class="row g-4 mt-2">
+
+      <!-- Card 1 -->
+      <div class="col-md-3">
+        <div class="card shadow card-fixed" style="min-height: 410px;">
+          <img src="left_tab.avif" class="card-img-top" alt="Image 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">Surface Pro for Business, Copilot+ PC | Intel</h5>
+            <p class="card-text">Ultra-versatile and built with Intel® Core™ Ultra processors (Series 2) that power AI
+              experiences to amplify your team’s productivity.</p>
+            <a href="https://www.microsoft.com/en-in/surface/business/surface-pro-intel-11th-edition?icid=mscom_marcom_CPW1a_SurfaceProForBusinessCopilotPCIntel" target="_blank" class="btn btn-primary">Learn more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-3">
+        <div class="card shadow card-fixed" style="min-height: 410px;">
+          <img src="microsoft.avif" class="card-img-top" alt="Image 2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Microsoft 365 Copilot</h5>
+            <p class="card-text">Save time and focus on the things that matter most with AI in Microsoft 365 for
+              business.</p>
+            <a href="https://www.microsoft.com/en-in/microsoft-365/copilot/business?icid=mscom_marcom_CPW2a_M365forBusiness_Copilot?icid=mscom_marcom_CPW2a_M365forBusiness_Copilot" target="_blank" class="btn btn-primary">Learn more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-3">
+        <div class="card shadow card-fixed" style="min-height: 410px;">
+          <img src="era.jpeg" class="card-img-top" alt="Image 3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Join the era of AI</h5>
+            <p class="card-text">Create, communicate, and code with the latest Microsoft AI solutions.</p>
+            <a href="https://www.microsoft.com/en-in/ai?icid=mscom_marcom_CPW3a_AzureAI" target="_blank" class="btn btn-primary">Explore AI solution</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-3">
+        <div class="card shadow card-fixed" style="min-height: 410px;">
+          <img src="vs.webp" class="card-img-top" alt="Image 4">
+          <div class="card-body text-center">
+            <h5 class="card-title">Visual Studio 2022</h5>
+            <p class="card-text">Get the most comprehensive IDE for .NET and C++ developers on Windows for building web,
+              cloud, desktop, mobile apps, services and games.</p>
+            <a href="https://visualstudio.microsoft.com/downloads/?icid=mscom_marcom_CPW4a_VisualStudio22" target="_blank" class="btn btn-primary">Download Visual Studio 2022</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Follow Microsoft Section -->
+      <div class="container mt-5 pt-4">
+        <div class="d-flex align-items-center gap-3">
+          <h5 class="mb-0">Follow Microsoft</h5>
+          <a href="https://www.facebook.com/MicrosoftIndia" target="_blank" class="text-dark">
+            <i class="bi bi-facebook" style="font-size: 1.5rem;"></i>
+          </a>
+          <a href="https://x.com/microsoftindia" target="_blank" class="text-dark">
+            <i class="fab fa-x-twitter" style="font-size: 1.5rem;"></i>
+          </a>
+          <a href="https://www.youtube.com/user/IndiaMicrosoftVideos" target="_blank" class="text-dark">
+            <i class="bi bi-youtube" style="font-size: 1.5rem;"></i>
+          </a>
+        </div>
+      </div>
+
+<!-- Microsoft Footer Section -->
+<footer class="bg-light mt-5 pt-4 pb-4 text-dark" style="width: 100%;">
+  <div class="container-fluid">
+    <div class="row row-cols-1 row-cols-md-6 g-4">
+      <div>
+        <h6 class="fw-bold text-dark">What's new</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-decoration-none text-dark">Surface Pro</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Surface Laptop</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Microsoft Copilot</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Microsoft 365</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Explore Microsoft products</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Windows 11 apps</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6 class="fw-bold text-dark">Microsoft Store</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-decoration-none text-dark">Account profile</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Download Center</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Microsoft Store Support</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Returns</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Order tracking</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6 class="fw-bold text-dark">Education</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-decoration-none text-dark">Microsoft in education</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Devices for education</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Microsoft Teams for Education</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Microsoft 365 Education</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Office Education</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Educator training and development</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Deals for students and parents</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Azure for students</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6 class="fw-bold text-dark">Business</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-decoration-none text-dark">Microsoft Cloud</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Microsoft Security</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Azure</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Dynamics 365</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Microsoft 365</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Microsoft Advertising</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Microsoft 365 Copilot</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Microsoft Teams</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6 class="fw-bold text-dark">Developer & IT</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-decoration-none text-dark">Microsoft Developer</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Microsoft Learn</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Explore ISV Success</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Microsoft Tech Community</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Azure Marketplace</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">AppSource</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Microsoft Power Platform</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Visual Studio</a></li>
+        </ul>
+      </div>
+      <div>
+        <h6 class="fw-bold text-dark">Company</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-decoration-none text-dark">Careers</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">About Microsoft</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Company news</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Privacy at Microsoft</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Investors</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Security</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Sustainability</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="d-flex flex-wrap justify-content-between align-items-center mt-4">
+      <div class="d-flex align-items-center gap-3 text-dark">
+        <span><i class="bi bi-globe2"></i> English (India)</span>
+        <button class="btn btn-outline-secondary btn-sm">Your Privacy Choices</button>
+        <a href="#" class="text-decoration-none text-dark">Consumer Health Privacy</a>
+      </div>
+      <div class="d-flex align-items-center gap-3 mt-2 mt-md-0 text-dark">
+        <a href="#" class="text-decoration-none text-dark">Contact Microsoft</a>
+        <a href="#" class="text-decoration-none text-dark">Privacy</a>
+        <a href="#" class="text-decoration-none text-dark">Terms of use</a>
+        <a href="#" class="text-decoration-none text-dark">Trademarks</a>
+        <a href="#" class="text-decoration-none text-dark">About our ads</a>
+        <span>© Microsoft 2025</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
